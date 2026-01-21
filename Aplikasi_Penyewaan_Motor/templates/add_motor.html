@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
     <title>Tambah Motor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<h2>Tambah Motor</h2>
+<div class="navbar">
+    <strong>MOTO RENTAL</strong>
+    <div>
+        <a href="/">Home</a>
+        <a href="/motor">Kelola Motor</a>
+        <a href="/penyewa">Kelola Penyewa</a>
+    </div>
+</div>
 
+<div class="form-container"></div>
+<h2>Tambah Motor</h2>
 <form method="POST">
     Nama Motor:<br>
     <input type="text" name="nama"><br>
