@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Motor</title>
+</head>
+<body>
+
+<h2>Data Motor</h2>
+<a href="/motor/add">Tambah Motor</a> |
+<a href="/">Kembali</a>
+
+<table border="1">
+<tr>
+    <th>Nama</th>
+    <th>Merk</th>
+    <th>Plat</th>
+    <th>Status</th>
+    <th>Aksi</th>
+</tr>
+
+{% for m in data %}
+<tr>
+    <td>{{ m[1] }}</td>
+    <td>{{ m[2] }}</td>
+    <td>{{ m[3] }}</td>
+    <td>{{ m[4] }}</td>
+    <td>
+        <a href="/motor/edit/{{ m[0] }}">Edit</a> |
+        <a href="/motor/delete/{{ m[0] }}">Hapus</a>
+    </td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

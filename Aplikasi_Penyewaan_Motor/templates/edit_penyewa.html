@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Penyewa</title>
+</head>
+<body>
+
+<h2>Edit Penyewa</h2>
+
+<form method="POST">
+    Nama:<br>
+    <input type="text" name="nama" value="{{ data[1] }}"><br>
+    NIK:<br>
+    <input type="text" name="nik" value="{{ data[2] }}"><br>
+    Alamat:<br>
+    <textarea name="alamat">{{ data[3] }}</textarea><br><br>
+    <button type="submit">Update</button>
+</form>
+
+<a href="/penyewa">Kembali</a>
+
+</body>
+</html>

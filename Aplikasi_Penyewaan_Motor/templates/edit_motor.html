@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Motor</title>
+</head>
+<body>
+
+<h2>Edit Motor</h2>
+
+<form method="POST">
+    Nama Motor:<br>
+    <input type="text" name="nama" value="{{ data[1] }}"><br>
+    Merk:<br>
+    <input type="text" name="merk" value="{{ data[2] }}"><br>
+    Plat Nomor:<br>
+    <input type="text" name="plat" value="{{ data[3] }}"><br><br>
+    <button type="submit">Update</button>
+</form>
+
+<a href="/motor">Kembali</a>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+
+<h1>Home Menu</h1>
+
+<a href="/motor">Data Motor</a> |
+<a href="/penyewa">Data Penyewa</a>
+
+<hr>
+
+<h2>Data Motor</h2>
+
+<table border="1">
+    <tr>
+        <th>Nama</th>
+        <th>Merk</th>
+        <th>Plat</th>
+        <th>Status</th>
+        <th>Penyewa</th>
+        <th>Aksi</th>
+    </tr>
+
+    {% for m in data %}
+    <tr>
+        <td>{{ m[1] }}</td>
+        <td>{{ m[2] }}</td>
+        <td>{{ m[3] }}</td>
+        <td>{{ m[4] }}</td>
+        <td>{{ m[5] if m[5] else '-' }}</td>
+        <td>
+            {% if m[4] == 'Tersedia' %}
+                <a href="/sewa_motor/{{ m[0] }}">Sewa</a>
+            {% else %}
+                <a href="/kembalikan_motor/{{ m[0] }}">Kembalikan</a>
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

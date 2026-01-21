@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sewa Motor</title>
+</head>
+<body>
+
+<h2>Pilih Penyewa</h2>
+
+<form method="POST">
+    <select name="penyewa">
+        {% for p in penyewa %}
+            <option value="{{ p[0] }}">{{ p[1] }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
+    <button type="submit">Sewa</button>
+</form>
+
+<a href="/">Batal</a>
+
+</body>
+</html>
